@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1em;
+}
+
+article {
+  display: block;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1em;
+  container-type: inline-size;
+}
+
+@container (min-width: 40em) {
+  a {
+    display: none;
+  }
+}
+@container (max-width: 40em) {
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+my-title {
+  background-color: lightblue;
+  grid-column: 1 / -1;
+}
